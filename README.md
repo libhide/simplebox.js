@@ -1,1 +1,3 @@
 # SimpleBox
+
+Documentation coming soon...
