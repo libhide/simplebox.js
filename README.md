@@ -1,3 +1,3 @@
-# SimpleBox
+# simplebox.js
 
 Documentation coming soon...
