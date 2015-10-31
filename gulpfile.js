@@ -16,13 +16,13 @@ gulp.task("minifyScripts", function() {
 });
 
 gulp.task('compileSass', function() {
-    return gulp.src("src/css/style.scss")
+    return gulp.src("src/css/simplebox.scss")
         .pipe(maps.init())
         .pipe(sass())
         .pipe(maps.write('./'))
         .pipe(gulp.dest('./demo/css'))
         .pipe(minifyCss({compatibility: 'ie8'}))
-        .pipe(rename('style.min.css'))
+        .pipe(rename('simplebox.min.css'))
         .pipe(gulp.dest('./dist/css'));
 });
 
