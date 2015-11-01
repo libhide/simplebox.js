@@ -12,17 +12,18 @@ body {
 
 a {
   text-decoration: none;
-  padding-bottom: 1px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0);;
-  transition: border-color 250ms ease-in-out;
+  line-height: 1;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  transition: border-color 300ms ease-out;
 
   &:hover {
-    border-color: rgba(255, 255, 255, 0.75);
+    border-color: rgba(0, 0, 0, 1);
   }
 }
 
 svg {
-  @include size(100%);
+  height: 100%;
+  width: 100%;
   max-width: 100%;
 }
 

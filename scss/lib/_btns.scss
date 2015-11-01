@@ -86,71 +86,7 @@
   width: 100%;
 }
 
-
-/*
-
-  Skins
-
-  * Black & White
-  * Grays
-  * Colors
-
-  Code:
-  <a href="#" class="btn btn--black">
-  <a href="#" class="btn btn--white">
-  <a href="#" class="btn btn--gray">
-  <a href="#" class="btn btn--gray-dark">
-  <a href="#" class="btn btn--gray-border">
-  <a href="#" class="btn btn--blue">
-
-*/
-
-/* BLACK & WHITE */
-
-.btn--black,
-.btn--black:link,
-.btn--black:visited {
-  color: #fff;
-  background-color: #111;
-}
-
-.btn--black:hover,
-.btn--black:focus {
-  color: #fff;
-  background-color: #444;
-  border-color: #444;
-}
-
-.btn--black:active {
-  color: #fff;
-  background-color: #999;
-  border-color: #999;
-}
-
-
-.btn--white,
-.btn--white:link,
-.btn--white:visited {
-  color: #111;
-  background-color: #fff;
-}
-
-.btn--white:hover,
-.btn--white:focus {
-  color: #111;
-  background-color: rgba(255,255,255,.7);
-  border-color: rgba(255,255,255,.7);
-}
-
-.btn--white:active {
-  color: #111;
-  background-color: rgba(255,255,255,.9);
-  border-color: rgba(255,255,255,.9);
-}
-
-
-
-/* Gray */
+// Gray Theme
 
 .btn--gray:link,
 .btn--gray:visited {
@@ -174,70 +110,25 @@
 
 .btn--gray-border:link,
 .btn--gray-border:visited {
-  background-color: #fff;
-  border-color: #555;
+  border-color: #9f9f9f;
   border-width: 2px;
   color: #555;
 }
 
 .btn--gray-border:hover,
 .btn--gray-border:focus {
-  background-color: #fff;
-  border-color: #ddd;
-  color: #777;
+  border-color: darken(#9f9f9f, 20%);
+  color: darken(#9f9f9f, 20%);
 }
 
 .btn--gray-border:active {
-  background-color: #ccc;
-  border-color: #ccc;
-  color: #444;
-}
-
-.btn--gray-dark:link,
-.btn--gray-dark:visited {
-  background-color: #555;
-  color: #eee;
-}
-
-.btn--gray-dark:hover,
-.btn--gray-dark:focus {
-  background-color: #333;
-  border-color: #333;
-  color: #eee;
-}
-
-.btn--gray-dark:active {
-  background-color: #777;
-  border-color: #777;
-  color: #eee;
-}
-
-
-/* BLUE */
-
-.btn--blue:link,
-.btn--blue:visited {
-  color: #fff;
-  background-color: #0074D9;
-}
-
-.btn--blue:hover,
-.btn--blue:focus {
-  color: #fff!important;
-  background-color: #0063aa;
-  border-color: #0063aa;
-}
-
-.btn--blue:active {
-  color: #fff;
-  background-color: #001F3F;
-  border-color: #001F3F;
+  border-color: #9f9f9f;
+  color: #9f9f9f;
 }
 
 /* Keep it mobile-first and responsive */
-
 @media screen and (min-width: 32em) {
   .btn--full {
-    max-width: 16em!important;
+    max-width: 16em !important;
   }
 }

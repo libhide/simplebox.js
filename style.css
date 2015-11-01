@@ -356,8 +356,210 @@ td,
 th {
   padding: 0; }
 
+/*
+ *
+ * btns.css
+ * Simple css utilities for building responsive buttons
+ * Author: mrmrs
+ * License: MIT
+ *
+ *                */
+/*
+
+  Base .btn class
+
+  Code:
+  <a href="#" class="btn">Default button</a>
+
+*/
+.btn,
+.btn:link,
+.btn:visited {
+  border-radius: .25em;
+  border-style: solid;
+  border-width: 1px;
+  color: #111;
+  display: inline-block;
+  font-family: avenir, helvetica, roboto, arial, sans-serif;
+  letter-spacing: .15em;
+  margin-bottom: .5em;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color .4s, background-color .4s, border .4s; }
+
+.btn:hover,
+.btn:focus {
+  color: #7FDBFF;
+  border: 1px solid #7FDBFF;
+  transition: background-color .3s, color .3s, border .3s; }
+
+.btn:active {
+  color: #0074D9;
+  border: 1px solid #0074D9;
+  transition: background-color .3s, color .3s, border .3s; }
+
+/*
+
+  Sizes
+
+  Small  = .btn--s
+  Medium = .btn--m
+  Large  = .btn--l
+
+  Code:
+  <a href="#" class="btn btn--s">
+  <a href="#" class="btn btn--m">
+  <a href="#" class="btn btn--l">
+
+*/
+.btn--s {
+  font-size: 14px; }
+
+.btn--m {
+  font-size: 16px; }
+
+.btn--l {
+  font-size: 20px;
+  border-radius: 0.25em !important; }
+
+/*
+
+  Layout utility for responsive buttons
+
+  Code:
+  <a href="#" class="btn btn--full">
+
+*/
+.btn--full,
+.btn--full:link {
+  border-radius: .25em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 100%; }
+
+.btn--gray:link,
+.btn--gray:visited {
+  background-color: #f0f0f0;
+  border-color: #f0f0f0;
+  color: #555; }
+
+.btn--gray:hover,
+.btn--gray:focus {
+  background-color: #ddd;
+  border-color: #ddd;
+  color: #444; }
+
+.btn--gray:active {
+  background-color: #ccc;
+  border-color: #ccc;
+  color: #444; }
+
+.btn--gray-border:link,
+.btn--gray-border:visited {
+  border-color: #9f9f9f;
+  border-width: 2px;
+  color: #555; }
+
+.btn--gray-border:hover,
+.btn--gray-border:focus {
+  border-color: #6c6c6c;
+  color: #6c6c6c; }
+
+.btn--gray-border:active {
+  border-color: #9f9f9f;
+  color: #9f9f9f; }
+
+/* Keep it mobile-first and responsive */
+@media screen and (min-width: 32em) {
+  .btn--full {
+    max-width: 16em !important; } }
+
 html, body {
   height: 100%; }
+
+body {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #111;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased; }
+
+a {
+  text-decoration: none;
+  line-height: 1;
+  border-bottom: 2px solid transparent;
+  transition: border-color 300ms ease-out; }
+  a:hover {
+    border-color: black; }
+
+svg {
+  height: 100%;
+  width: 100%;
+  max-width: 100%; }
+
+img {
+  max-width: 100%; }
+
+.hero-title {
+  font-weight: 500;
+  letter-spacing: -1px;
+  margin: 0 0 -10px 0;
+  font-size: 5.4em; }
+
+.hero-subtitle {
+  font-weight: 300;
+  letter-spacing: 3px;
+  margin: 0; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+.lowercase {
+  text-transform: lowercase; }
+
+strong,
+.bold {
+  font-weight: 700; }
+
+.thin {
+  font-weight: 200;
+  letter-spacing: 5px; }
+
+.hero-header {
+  min-height: 420px;
+  background-color: #f0efef;
+  color: #9f9f9f;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; }
+
+.text {
+  margin-top: -30px; }
+
+.cta a:first-child {
+  margin-right: 20px; }
+
+section.about {
+  max-width: 768px;
+  margin: 30px auto 0;
+  padding: 0 15px;
+  font-size: 1.2em;
+  font-weight: 500; }
+
+footer {
+  background-color: #f0efef;
+  color: #9f9f9f;
+  padding: 25px;
+  font-weight: 500; }
+  footer p {
+    margin: 0px;
+    line-height: 1.2;
+    margin-left: 90px; }
 
 /*
 
