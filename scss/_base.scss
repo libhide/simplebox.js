@@ -1,1 +1,31 @@
 html, body { height: 100%; }
+
+body {
+  font-size: 1em;
+  line-height: 1.6;
+  color: $black;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  padding-bottom: 1px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);;
+  transition: border-color 250ms ease-in-out;
+
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.75);
+  }
+}
+
+svg {
+  @include size(100%);
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
