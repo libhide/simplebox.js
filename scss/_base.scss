@@ -12,6 +12,7 @@ body {
 
 a {
   text-decoration: none;
+  color: black;
   line-height: 1;
   border-bottom: 2px solid rgba(0, 0, 0, 0);
   transition: border-color 300ms ease-out;
@@ -21,12 +22,8 @@ a {
   }
 }
 
-svg {
-  height: 100%;
-  width: 100%;
-  max-width: 100%;
-}
-
 img {
   max-width: 100%;
+  margin: 2em auto;
+  display: block;
 }

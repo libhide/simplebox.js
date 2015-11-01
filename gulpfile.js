@@ -25,10 +25,10 @@ gulp.task('sass', function() {
         .pipe(sass())
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7']))
         .pipe(rename('style.css'))
-        .pipe(gulp.dest("./"))
+        .pipe(gulp.dest("./css"))
         .pipe(minify())
         .pipe(rename('style.min.css'))
-        .pipe(gulp.dest("./"))
+        .pipe(gulp.dest("./css/"))
         .pipe(browserSync.stream());
 });
 

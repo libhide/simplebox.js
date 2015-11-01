@@ -25,6 +25,12 @@ section.about {
   font-weight: 500;
 }
 
+.hero-image {
+  /* Shrinking image as a personal preference */
+  height: 70%;
+  width: 70%;
+}
+
 // Footer
 footer {
   background-color: $light-gray;
@@ -36,6 +42,17 @@ footer {
     margin: 0px;
     line-height: 1.2;
     margin-left: 90px;
+  }
+
+  a {
+    color: inherit;
+    line-height: 1;
+    border-bottom: 1px solid rgba(159, 159, 159, 0);
+    transition: border-color 300ms ease-out;
+
+    &:hover {
+      border-color: rgba(159, 159, 159, 1);
+    }
   }
 }
 

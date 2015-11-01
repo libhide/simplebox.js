@@ -7,7 +7,7 @@
     <meta name="author" content="Ratik Sharma">
     <meta name="description" content="Performance focussed lightbox jQuery plugin for the web.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <header class="hero-header">
@@ -24,18 +24,24 @@
       <section class="about">
         <p><strong>simplebox.js</strong> is a small jQuery plugin (1400 bytes) that is easy to modify or extend to fit your needs. Abstracting your font-sizes into simple single purpose classes targeting individual breakpoints can help improve your sites css performance and reduce code bloat. Adjusting font-sizes and designing around content in the browser becomes easy as sunday morning.</p>
         <h4 class="thin uppercase">Give it a go</h4>
-        <img src="click-me.jpg">
+        <img class="hero-image slb" src="img/click-me.jpg">
         <h4 class="thin uppercase">The Why</h4>
         <p>simplebox.js is a small jQuery plugin (1400 bytes) that is easy to modify or extend to fit your needs. Abstracting your font-sizes into simple single purpose classes.</p>
         <h4 class="thin uppercase">The Usage</h4>
-        <p>Check out the documentation for simplebox.js on <a href="#">GitHub</a>.</p>
+        <p>Check out the documentation for simplebox.js on <a class="bold" href="#">GitHub</a>.</p>
       </section>
     </main>
     <!-- Creating some separation -->
-    <div style="height: 500px;"></div>
+    <div style="height: 250px;"></div>
     <footer>
-      <p>made with (heart) by <a href="#">Ratik Sharma</a></p>
+      <p>made with (heart) by <a target="_blank" href="#">Ratik Sharma</a></p>
       <p>License: MIT</p>
     </footer>
+    <!-- Scripts -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/simplebox.min.js"></script>
+    <script>
+    $('.slb').simplebox({ fadeSpeed: 400 });
+    </script>
   </body>
 </html>
