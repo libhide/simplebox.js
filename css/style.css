@@ -697,6 +697,12 @@ footer {
     @media (max-width: 1006px) {
       footer p {
         margin: 0; } }
+  footer .heart {
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    margin: 0;
+    margin-bottom: -4px; }
   footer a {
     color: inherit;
     line-height: 1;
