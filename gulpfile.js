@@ -21,6 +21,7 @@ gulp.task('compileSass', function() {
         .pipe(sass())
         .pipe(maps.write('./'))
         .pipe(gulp.dest('./demo/css'))
+        .pipe(gulp.dest('./dist/css'))
         .pipe(minifyCss({compatibility: 'ie8'}))
         .pipe(rename('simplebox.min.css'))
         .pipe(gulp.dest('./dist/css'));
