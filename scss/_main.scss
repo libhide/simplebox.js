@@ -50,6 +50,16 @@
       line-height: 1.2;
     }
   }
+
+  @media (max-width: $mobile-small) {
+    .hero-title {
+      font-size: 2.5em;
+      margin-bottom: 3px;
+    }
+    .hero-subtitle {
+      font-size: 1.05em;
+    }
+  }
 }
 
 .cta {
