@@ -19,11 +19,15 @@
         $overlay.click(function() {
             $overlay.fadeOut(fadeSpeed);
             $('.cross').addClass('cross-close');
+            // $image.addClass('pop-out');
+            // $image.removeClass('pop-in');
         });
 
         $cross.click(function() {
             $overlay.fadeOut(fadeSpeed);
             $(this).addClass('cross-close');
+            // $image.addClass('pop-out');
+            // $image.removeClass('pop-in');
         });
 
         return this.each(function() {
@@ -37,6 +41,8 @@
                 var imageSRC = $this.attr("src");
                 $image.attr("src", imageSRC);
                 $image.css("max-height", "80%");
+                $image.addClass('pop-in');
+                $image.removeClass('pop-out');
                 $image.addClass('center');
 
                 $overlay.css('pointer-events', 'initial');

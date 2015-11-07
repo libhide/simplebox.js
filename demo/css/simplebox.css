@@ -2,6 +2,16 @@
   box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.2);
   cursor: pointer; }
 
+.pop-in {
+  -webkit-animation: pop-in 250ms;
+  -moz-animation: pop-in 250ms;
+  -ms-animation: pop-in 250ms; }
+
+.pop-out {
+  -webkit-animation: pop-out 250ms;
+  -moz-animation: pop-out 250ms;
+  -ms-animation: pop-out 250ms; }
+
 .center {
   max-height: 90%;
   max-width: 90%;
@@ -41,5 +51,45 @@
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   opacity: 0; }
+
+@-webkit-keyframes pop-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5); }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5); }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@-webkit-keyframes pop-out {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5); } }
+
+@keyframes pop-out {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5); } }
 
 /*# sourceMappingURL=simplebox.css.map */
