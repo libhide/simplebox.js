@@ -4,19 +4,15 @@
     $.fn.simplebox = function(options) {
         var settings = $.extend({
             fadeSpeed: 400,
-            imgPath: "img/",
+            imgPath: "img",
             closeImg: "cross.svg",
             closeCrossAnimation: true,
-            init: function() {
-                this.closeImage = this.imgPath + this.closeImg;
-                return this;
-            }
-        }.init(), options);
+        }, options);
 
         // Helper Variables
         var $body = $("body");
         var $overlay = $('<div id="overlay"></div>');
-        var $cross = $('<img class="cross" src="' + settings.closeImage + '">');
+        var $cross = $('<img class="cross" src="' + settings.imgPath + "/" +settings.closeImg + '">');
         var $image = $("<img class='slb'>");
         var fadeSpeed = settings.fadeSpeed;
 
