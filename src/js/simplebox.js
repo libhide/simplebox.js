@@ -25,8 +25,7 @@
             } else {
                 $('.cross').hide(settings.fadeSpeed);
             }
-            // $image.addClass('pop-out');
-            // $image.removeClass('pop-in');
+            $image.removeClass('slb-opened');
         });
 
         $cross.click(function() {
@@ -36,8 +35,7 @@
             } else {
                 $('.cross').hide(settings.fadeSpeed);
             }
-            // $image.addClass('pop-out');
-            // $image.removeClass('pop-in');
+            $image.removeClass('slb-opened');
         });
 
         return this.each(function() {
@@ -46,7 +44,6 @@
 
             // When the image is clicked
             $this.click(function() {
-                console.log("Click");
                 var $this = $(this);
                 var imageSRC = $this.attr("src");
                 $image.attr("src", imageSRC);
@@ -54,6 +51,7 @@
                 $image.addClass('pop-in');
                 $image.removeClass('pop-out');
                 $image.addClass('center');
+                $image.addClass('slb-opened');
 
                 $overlay.css('pointer-events', 'initial');
 

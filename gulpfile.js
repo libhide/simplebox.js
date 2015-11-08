@@ -29,7 +29,6 @@ gulp.task('compileSass', function() {
 
 gulp.task('outputImages', function() {
     return gulp.src("src/img/cross.svg")
-        .pipe(gulp.dest('./demo/img'))
         .pipe(gulp.dest('./dist/img'));
 });
 

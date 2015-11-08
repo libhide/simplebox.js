@@ -4,7 +4,7 @@
     $.fn.simplebox = function(options) {
         var settings = $.extend({
             fadeSpeed: 400,
-            imgPath: "img/",
+            imgPath: "img",
             closeImg: "cross.svg",
             closeCrossAnimation: true,
         }, options);
@@ -12,7 +12,7 @@
         // Helper Variables
         var $body = $("body");
         var $overlay = $('<div id="overlay"></div>');
-        var $cross = $('<img class="cross" src="' + settings.imgPath + settings.closeImg + '">');
+        var $cross = $('<img class="cross" src="' + settings.imgPath + "/" +settings.closeImg + '">');
         var $image = $("<img class='slb'>");
         var fadeSpeed = settings.fadeSpeed;
 
@@ -25,8 +25,7 @@
             } else {
                 $('.cross').hide(settings.fadeSpeed);
             }
-            // $image.addClass('pop-out');
-            // $image.removeClass('pop-in');
+            $image.removeClass('slb-opened');
         });
 
         $cross.click(function() {
@@ -36,8 +35,7 @@
             } else {
                 $('.cross').hide(settings.fadeSpeed);
             }
-            // $image.addClass('pop-out');
-            // $image.removeClass('pop-in');
+            $image.removeClass('slb-opened');
         });
 
         return this.each(function() {
@@ -46,7 +44,6 @@
 
             // When the image is clicked
             $this.click(function() {
-                console.log("Click");
                 var $this = $(this);
                 var imageSRC = $this.attr("src");
                 $image.attr("src", imageSRC);
@@ -54,6 +51,7 @@
                 $image.addClass('pop-in');
                 $image.removeClass('pop-out');
                 $image.addClass('center');
+                $image.addClass('slb-opened');
 
                 $overlay.css('pointer-events', 'initial');
 

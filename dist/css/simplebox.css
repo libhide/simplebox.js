@@ -1,6 +1,10 @@
 .slb {
   box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.2);
-  cursor: pointer; }
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in; }
+
+.slb-opened {
+  cursor: auto; }
 
 .pop-in {
   -webkit-animation: pop-in 250ms;
