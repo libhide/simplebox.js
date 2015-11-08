@@ -4,7 +4,8 @@
     $.fn.simplebox = function(options) {
         var settings = $.extend({
             fadeSpeed: 400,
-            closeImage: "img/cross.svg"
+            closeImage: "img/cross.svg",
+            closeCrossAnimation: true
         }, options);
 
         // Helper Variables
@@ -18,14 +19,22 @@
         // Hide lightbox
         $overlay.click(function() {
             $overlay.fadeOut(fadeSpeed);
-            $('.cross').addClass('cross-close');
+            if (settings.closeCrossAnimation) {
+                $('.cross').addClass('cross-close');
+            } else {
+                $('.cross').hide(settings.fadeSpeed);
+            }
             // $image.addClass('pop-out');
             // $image.removeClass('pop-in');
         });
 
         $cross.click(function() {
             $overlay.fadeOut(fadeSpeed);
-            $(this).addClass('cross-close');
+            if (settings.closeCrossAnimation) {
+                $('.cross').addClass('cross-close');
+            } else {
+                $('.cross').hide(settings.fadeSpeed);
+            }
             // $image.addClass('pop-out');
             // $image.removeClass('pop-in');
         });
@@ -47,7 +56,9 @@
 
                 $overlay.css('pointer-events', 'initial');
 
-                $cross.removeClass('cross-close');
+                if (settings.closeCrossAnimation) {
+                    $('.cross').removeClass('cross-close');
+                }
 
                 $overlay.append($image);
                 $body.append($overlay);
