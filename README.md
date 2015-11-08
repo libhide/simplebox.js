@@ -36,7 +36,7 @@ The plugin comes with three options. Yes, just three. Think of this as a feature
 ```JavaScript
 $('.slb').simplebox({
     fadeSpeed: 300, // default is 400ms, applied to all fade animations in the plugin
-    imgPath: "images/", // provide the relative url to your images folder, default being `/img`
+    imgPath: "some_folder/images", // provide the relative url to your images folder, default being `img`
     closeImg: "x.svg", // default image is the cross.svg provided with the plugin
     closeCrossAnimation: false // If set to true, the closing animation for the cross is used
 });
