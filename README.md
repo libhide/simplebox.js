@@ -4,21 +4,32 @@ simplebox.js is a lightweight lightbox plugin (1.4 KB) that is easy to modify or
 
 The idea behind this plugin was to make setting up lightbox painless. My experience with finding and setting up lightbox plugins has been pretty bad. The plugins I've come across almost always have too many features. simplebox.js is designed to have just one feature: lightboxing. It's responsive out of the box and allows only a few crucial settings.
 
+## Installation
+To install simplebox, you will have to include the following resources in your page. The JS files should be loaded in the order stipulated below. For the CSS file, you can either incorporate it with your site's stylesheet, or load it externally through the `<link>` element in `<head>`.
+
+| Type | File Name            | Description                                                                                                            |
+|------|----------------------|------------------------------------------------------------------------------------------------------------------------|
+| JS   | [jQuery](http://jquery.com) | jQuery is obviously needed |
+| JS   | `dist/js/simplebox.min.js` | Confers the main functionality of the plugin. |
+| CSS  | `dist/css/simplebox.min.css`   | Offers styles that are crucial for the correct display of simplebox. The appearance will break if this is not included. Properties in this file include the necessary vendor prefixes. |
+| IMG  | `dist/img/cross.svg`   | Acts as the default cross/close icon for the lightbox. Add this to your images folder. |
+
 ## Usage
+### Basic
+It is rather straightforward to use simplebox&mdash;just add the **slb** class to all the images you want this plugin to work for and then simply chain the `.simplebox()` method to `$(".slb")` in your JavaScript.
 
-1. To get started, clone or download the zip for the repository. Once downloaded, you can checkout the demo inside the demo folder if you want.
-2. To hook the plugin up with your website, copy everything in the /dist folder and add it your project.
-    - **CSS:** You can either include the simplebox.min.css as a an individual file to your project or include it into your main stylesheet (as an SCSS partial?) to cut down on HTTP requests.
-    - **Images**: There is only one image included which is the default 'X' icon for the lightbox. You do have the option to override this image using the plugin's settings (more on this later). Add this image to your primary images folder.
-    - **JS**: This is the heart and soul of the plugin. Add the js file to your project.
-3. After adding the files and making sure you have jQuery hooked up, just call the plugin:
-
-```JavaScript
-// This works if you include the cross.svg image in a /img folder
-$('.slb').simplebox();
+```html
+<img class="slb" src="/path/to/image" alt="lorem ipsum" />
 ```
 
-## Options
+```javascript
+$(function () {
+    // This assumes that you have placed the cross.svg file inside /img in your project
+    $(".slb").simplebox();
+});
+```
+
+### Advanced
 
 The plugin comes with three options. Yes, just three. Think of this as a feature and not a drawback! If you want to access these options, call the plugin like this:
 
