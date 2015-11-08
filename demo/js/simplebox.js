@@ -4,9 +4,14 @@
     $.fn.simplebox = function(options) {
         var settings = $.extend({
             fadeSpeed: 400,
-            closeImage: "img/cross.svg",
-            closeCrossAnimation: true
-        }, options);
+            imgPath: "img/",
+            closeImg: "cross.svg",
+            closeCrossAnimation: true,
+            init: function() {
+                this.closeImage = this.imgPath + this.closeImg;
+                return this;
+            }
+        }.init(), options);
 
         // Helper Variables
         var $body = $("body");
