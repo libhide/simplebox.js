@@ -16,27 +16,21 @@
         var $image = $("<img class='slb'>");
         var fadeSpeed = settings.fadeSpeed;
 
+        // Function for hiding the overlay.
+        var hideOverlay = function() {
+            $overlay.fadeOut(fadeSpeed);
+            if (settings.closeCrossAnimation) {
+                $('.cross').addClass('cross-close');
+            } else {
+                $('.cross').hide(settings.fadeSpeed);
+            }
+            $image.removeClass('slb-opened');
+        };
+
         // When X is clicked or user clicks on the overlay div
         // Hide lightbox
-        $overlay.click(function() {
-            $overlay.fadeOut(fadeSpeed);
-            if (settings.closeCrossAnimation) {
-                $('.cross').addClass('cross-close');
-            } else {
-                $('.cross').hide(settings.fadeSpeed);
-            }
-            $image.removeClass('slb-opened');
-        });
-
-        $cross.click(function() {
-            $overlay.fadeOut(fadeSpeed);
-            if (settings.closeCrossAnimation) {
-                $('.cross').addClass('cross-close');
-            } else {
-                $('.cross').hide(settings.fadeSpeed);
-            }
-            $image.removeClass('slb-opened');
-        });
+        $overlay.click(hideOverlay);
+        $cross.click(hideOverlay);
 
         return this.each(function() {
             $("body").append($cross);
