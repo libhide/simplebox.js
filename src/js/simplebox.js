@@ -3,27 +3,19 @@
 (function ($) {
     $.fn.simplebox = function(options) {
         var settings = $.extend({
-            fadeSpeed: 400,
-            imgPath: "img",
-            closeImg: "cross.svg",
-            closeCrossAnimation: true,
+            fadeSpeed: 400
         }, options);
 
         // Helper Variables
         var $body = $("body");
         var $overlay = $('<div id="overlay"></div>');
-        var $cross = $('<img class="cross" src="' + settings.imgPath + "/" +settings.closeImg + '">');
+        var $cross = $('<div class="cross"></div>');
         var $image = $("<img class='slb'>");
         var fadeSpeed = settings.fadeSpeed;
 
         // Function for hiding the overlay.
         var hideOverlay = function() {
             $overlay.fadeOut(fadeSpeed);
-            if (settings.closeCrossAnimation) {
-                $('.cross').addClass('cross-close');
-            } else {
-                $('.cross').hide(settings.fadeSpeed);
-            }
             $image.removeClass('slb-opened');
         };
 
@@ -33,7 +25,7 @@
         $cross.click(hideOverlay);
 
         return this.each(function() {
-            $("body").append($cross);
+            $overlay.append($cross);
             var $this = $(this);
 
             // When the image is clicked
@@ -49,16 +41,11 @@
 
                 $overlay.css('pointer-events', 'initial');
 
-                if (settings.closeCrossAnimation) {
-                    $('.cross').removeClass('cross-close');
-                }
-
                 $overlay.append($image);
                 $body.append($overlay);
 
                 // Show all the things!
                 $overlay.fadeIn(fadeSpeed);
-                $cross.show();
             });
         });
     };

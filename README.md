@@ -1,6 +1,6 @@
 # simplebox.js
 
-simplebox.js is a lightweight lightbox plugin (1.4 KB) that is easy to modify or extend to fit your needs. This plugin is intended to be a quick, responsive, efficient.
+simplebox.js is a lightweight lightbox plugin (603 bytes) that is easy to modify or extend to fit your needs. This plugin is intended to be a quick, responsive, efficient.
 
 The idea behind this plugin was to make the process of setting up a lightbox painless. My experience with finding and setting up lightbox plugins has been pretty bad. The plugins I've come across almost always have too many features. simplebox.js is designed to have just one feature: lightboxing. It's responsive out of the box and allows only a few crucial settings.
 
@@ -12,7 +12,6 @@ To install simplebox, you will have to include the following resources in your p
 | JS   | [jQuery](http://jquery.com) | jQuery is obviously needed |
 | JS   | `dist/js/simplebox.min.js` | Confers the main functionality of the plugin. |
 | CSS  | `dist/css/simplebox.min.css`   | Offers styles that are crucial for the correct display of simplebox. The appearance will break if this is not included. Properties in this file include the necessary vendor prefixes. |
-| IMG  | `dist/img/cross.svg`   | Acts as the default cross/close icon for the lightbox. Add this to your images folder. |
 
 ## Usage
 ### Basic
@@ -35,10 +34,7 @@ The plugin comes with three options. Yes, just three. Think of this as a feature
 
 ```JavaScript
 $('.slb').simplebox({
-    fadeSpeed: 300, // default is 400ms, applied to all fade animations in the plugin
-    imgPath: "some_folder/images", // provide the relative url to your images folder, default being `img`
-    closeImg: "x.svg", // default image is the cross.svg provided with the plugin
-    closeCrossAnimation: false // If set to true, the closing animation for the cross is used
+    fadeSpeed: 300 // default is 400ms, applied to all fade animations in the plugin
 });
 ```
 

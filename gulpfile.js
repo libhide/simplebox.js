@@ -10,6 +10,7 @@ var gulp   = require('gulp'),
 gulp.task("minifyScripts", function() {
     return gulp.src("src/js/simplebox.js")
         .pipe(gulp.dest('./demo/js'))
+        .pipe(gulp.dest('./dist/js'))
         .pipe(uglify())
         .pipe(rename('simplebox.min.js'))
         .pipe(gulp.dest('./dist/js'));
