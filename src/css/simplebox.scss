@@ -43,6 +43,7 @@
   right: 0;
   pointer-events: none;
   cursor: pointer;
+  will-change: transform;
 }
 
 .cross {
@@ -56,6 +57,7 @@
   transition: 300ms all ease-in-out;
   z-index: 99;
   opacity: 1;
+  will-change: transform;
 }
 
 .cross-close {

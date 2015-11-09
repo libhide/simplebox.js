@@ -37,7 +37,8 @@
   bottom: 0;
   right: 0;
   pointer-events: none;
-  cursor: pointer; }
+  cursor: pointer;
+  will-change: transform; }
 
 .cross {
   display: none;
@@ -49,7 +50,8 @@
   cursor: pointer;
   transition: 300ms all ease-in-out;
   z-index: 99;
-  opacity: 1; }
+  opacity: 1;
+  will-change: transform; }
 
 .cross-close {
   -webkit-transform: rotate(-45deg);
