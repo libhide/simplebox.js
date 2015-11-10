@@ -19,6 +19,7 @@
             $overlay.fadeOut(fadeSpeed);
             $image.removeClass('slb-opened');
             lbIsOpen = false;
+            $body.css("overflow", "auto");
         };
 
         // When X is clicked or user clicks on the overlay div
@@ -40,6 +41,8 @@
             // When the image is clicked
             $this.click(function() {
                 lbIsOpen = true;
+                $body.css("overflow", "hidden");
+
                 var $this = $(this);
                 var imageSRC = $this.attr("src");
                 $image.attr("src", imageSRC);
