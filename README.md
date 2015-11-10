@@ -1,6 +1,6 @@
 # simplebox.js
 
-simplebox.js is a lightweight lightbox plugin (603 bytes) that is easy to modify or extend to fit your needs. This plugin is intended to be a quick, responsive, efficient.
+simplebox.js is a lightweight lightbox plugin (724 bytes) that is easy to modify or extend to fit your needs. This plugin is intended to be a quick, responsive, efficient.
 
 The idea behind this plugin was to make the process of setting up a lightbox painless. My experience with finding and setting up lightbox plugins has been pretty bad. The plugins I've come across almost always have too many features. simplebox.js is designed to have just one feature: lightboxing. It's responsive out of the box and allows only a few crucial settings.
 
