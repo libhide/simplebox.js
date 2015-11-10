@@ -12,11 +12,13 @@
         var $cross = $('<div class="cross"></div>');
         var $image = $("<img class='slb'>");
         var fadeSpeed = settings.fadeSpeed;
+        var lbIsOpen = false;
 
         // Function for hiding the overlay.
         var hideOverlay = function() {
             $overlay.fadeOut(fadeSpeed);
             $image.removeClass('slb-opened');
+            lbIsOpen = false;
         };
 
         // When X is clicked or user clicks on the overlay div
@@ -24,12 +26,20 @@
         $overlay.click(hideOverlay);
         $cross.click(hideOverlay);
 
+        // Attaching ESC listener
+        $(document).keyup(function(e) {
+             if (e.keyCode == 27 && lbIsOpen) {
+                hideOverlay();
+            }
+        });
+
         return this.each(function() {
             $overlay.append($cross);
             var $this = $(this);
 
             // When the image is clicked
             $this.click(function() {
+                lbIsOpen = true;
                 var $this = $(this);
                 var imageSRC = $this.attr("src");
                 $image.attr("src", imageSRC);
