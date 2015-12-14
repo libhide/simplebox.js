@@ -1,6 +1,6 @@
 # simplebox.js
 
-simplebox.js is a lightweight lightbox plugin (724 bytes) that is easy to modify or extend to fit your needs. This plugin is intended to be a quick, responsive, efficient.
+simplebox.js is a lightweight lightbox plugin (936 bytes) that is easy to modify or extend to fit your needs. This plugin is intended to be a quick, responsive, efficient.
 
 The idea behind this plugin was to make the process of setting up a lightbox painless. My experience with finding and setting up lightbox plugins has been pretty bad. The plugins I've come across almost always have too many features. simplebox.js is designed to have just one feature: lightboxing. It's responsive out of the box and allows only a few crucial settings.
 
@@ -30,11 +30,12 @@ $(function () {
 
 ### Advanced
 
-The plugin comes with three options. Yes, just three. Think of this as a feature and not a drawback! If you want to access these options, call the plugin like this:
+The plugin comes with two options. Yes, just two. Think of this as a feature and not a drawback! If you want to access these options, call the plugin like this:
 
 ```JavaScript
 $('.slb').simplebox({
-    fadeSpeed: 300 // default is 400ms, applied to all fade animations in the plugin
+    fadeSpeed: 300, // default is 400ms, applied to all fade animations in the plugin
+    darkMode: true // default is false
 });
 ```
 
