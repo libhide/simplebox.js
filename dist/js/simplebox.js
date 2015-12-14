@@ -3,7 +3,8 @@
 (function ($) {
     $.fn.simplebox = function(options) {
         var settings = $.extend({
-            fadeSpeed: 400
+            fadeSpeed: 400,
+            darkMode: false
         }, options);
 
         // Helper Variables
@@ -14,10 +15,21 @@
         var fadeSpeed = settings.fadeSpeed;
         var lbIsOpen = false;
 
+        // Modifying theme based on preference
+        if (settings.darkMode) {
+            $overlay.css('background-color', 'black');
+            $cross.addClass('cross--dark');
+            $('.slb').addClass('slb--invert');
+            $image.addClass('slb--invert');
+        } else {
+            $overlay.css('background-color', 'white');
+            $cross.addClass('cross--light');
+        }
+
         // Function for hiding the overlay.
         var hideOverlay = function() {
             $overlay.fadeOut(fadeSpeed);
-            $image.removeClass('slb-opened');
+            $image.removeClass('slb--opened');
             lbIsOpen = false;
             $body.css("overflow", "auto");
         };
@@ -50,7 +62,7 @@
                 $image.addClass('pop-in');
                 $image.removeClass('pop-out');
                 $image.addClass('center');
-                $image.addClass('slb-opened');
+                $image.addClass('slb--opened');
 
                 $overlay.css('pointer-events', 'initial');
 

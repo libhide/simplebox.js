@@ -14,8 +14,7 @@
   position: absolute;
   content: '';
   width: 35px;
-  height: 2px;
-  background-color: black; }
+  height: 2px; }
 
 .cross::after {
   -webkit-transform: rotate(45deg);
@@ -25,12 +24,23 @@
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg); }
 
+.cross--light::after,
+.cross--light::before {
+  background-color: black; }
+
+.cross--dark::after,
+.cross--dark::before {
+  background-color: white; }
+
 .slb {
   box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.2);
   cursor: -webkit-zoom-in;
   cursor: zoom-in; }
 
-.slb-opened {
+.slb--invert {
+  box-shadow: 2px 2px 12px 1px rgba(255, 255, 255, 0.3); }
+
+.slb--opened {
   cursor: auto; }
 
 .pop-in {
@@ -45,7 +55,6 @@
 
 #overlay {
   display: none;
-  background: white;
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -67,6 +76,16 @@
   left: 0;
   right: 0;
   margin: auto; }
+
+@-webkit-keyframes pop-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5); }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
 
 @-webkit-keyframes pop-in {
   0% {

@@ -1,0 +1,80 @@
+/*
+  Credits: Malik Dellidj
+  http://codepen.io/kowlor/pen/ByavWB
+*/
+
+input.sw {
+  opacity: 0;
+  position: absolute;
+  left: -9999px;
+}
+
+input.sw + label {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: .2s ease;
+  display: inline-block;
+  height: 30px;
+  width: 51px;
+  position: relative;
+  box-shadow: inset 0 0 0px 2px #e4e4e4;
+  border-radius: 60px;
+}
+
+input.sw + label:before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 30px;
+  width: 30px;
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+  background: rgba(76, 217, 100, 0);
+  transition: 0.2s cubic-bezier(0.24, 0, 0.5, 1);
+}
+
+input.sw + label:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 28px;
+  width: 28px;
+  top: 50%;
+  margin-top: -14px;
+  left: 1px;
+  border-radius: 60px;
+  background: #000;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 4px 0px 0 rgba(255, 255, 255, 0.04), 0 4px 9px rgba(255, 255, 255, 0.13), 0 3px 3px rgba(255, 255, 255, 0.05);
+  transition: 0.35s cubic-bezier(0.54, 1.6, 0.5, 1);
+}
+
+input.sw:checked + label:after {
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 4px 0px 0 rgba(0, 0, 0, 0.07), 0 4px 9px rgba(0, 0, 0, 0.15), 0 3px 3px rgba(0, 0, 0, 0.08);
+}
+
+input.sw + label span {
+  white-space: nowrap;
+  height: 30px;
+  line-height: 30px;
+  margin-left: 45px;
+  padding-left: 16px;
+}
+
+input.sw:checked + label:before {
+  width: 51px;
+  background: #fff;
+  transition: width 0.2s cubic-bezier(0, 0, 0, 0.1) !important;
+}
+
+input.sw:checked + label:after {
+  left: 22px;
+}
+
+input.sw:checked + label {
+  box-shadow: inset 0 0 0px 25px #e4e4e4;
+  transition: box-shadow 2.5s cubic-bezier(0, 1.2, 0.94, 0.95);
+}

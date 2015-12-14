@@ -12,20 +12,30 @@
 }
 
 .cross::after,
-.cross::before{
+.cross::before {
   position: absolute;
   content: '';
   width: 35px;
   height: 2px;
-  background-color: black;
 }
-.cross::after{
+.cross::after {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.cross::before{
+.cross::before {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
+}
+
+// Cross Themes
+.cross--light::after,
+.cross--light::before, {
+  background-color: black;
+}
+
+.cross--dark::after,
+.cross--dark::before, {
+  background-color: white;
 }
 
 // Image classes
@@ -35,7 +45,11 @@
   cursor: zoom-in;
 }
 
-.slb-opened {
+.slb--invert {
+  box-shadow: 2px 2px 12px 1px rgba(255, 255, 255, 0.3);
+}
+
+.slb--opened {
   cursor: auto;
 }
 
@@ -54,7 +68,6 @@
 
 #overlay {
   display: none;
-  background: rgb(255, 255, 255);
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -81,6 +94,11 @@
 }
 
 // Animation definitions
+@-webkit-keyframes pop-in {
+  0% { opacity: 0; -webkit-transform: scale(0.5); transform: scale(0.5); }
+  100% { opacity: 1; -webkit-transform: scale(1); transform: scale(1); }
+}
+
 @-webkit-keyframes pop-in {
   0% { opacity: 0; -webkit-transform: scale(0.5); transform: scale(0.5); }
   100% { opacity: 1; -webkit-transform: scale(1); transform: scale(1); }

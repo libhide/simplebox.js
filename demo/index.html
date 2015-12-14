@@ -5,16 +5,24 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/simplebox.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/switch.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
   <div class="container">
     <h1 class="title">simplebox.js Demo</h1>
+
     <p class="center-reset">This is a quick little demo showcasing simplebox.js and how it works. This lightbox plugin is intended to be a quick, responsive, efficient. One key goal while creating this plugin was to not have an effect on load times for a website using the plugin. The lack of options/settings in the plugin is a feature and not a demerit.</p>
     <h3 class="subtitle center-reset">Give it a go</h3>
     <img class="slb" src="img/click-me.jpg">
     <p class="center-reset">Isn't that super neat? So, what are you waiting for? Head onto the <strong>/dist</strong> folder and begin using the plugin!</p>
+
+    <!-- Theme Toggle -->
+    <div class="switch">
+      <input type="checkbox" name="toggle" class="sw" id="toggle">
+      <label for="toggle"><span id="switch-label">switch to dark mode</span></label>
+    </div>
 
     <p class="credits">
       Made with <img class="heart" src="img/heart.svg"> by <a target="_blank" href="http://ratiksharma.com">Ratik Sharma</a></p>
@@ -26,9 +34,17 @@
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="js/simplebox.js"></script>
   <script type="text/javascript">
+    // Plugin call
     $('.slb').simplebox({
-      fadeSpeed: 350
+      fadeSpeed: 350,
+      // UNCOMMENT THIS FOR DARK MODE
+      // darkMode: true
     });
   </script>
+  <script type="text/javascript" src="js/demo.js"></script>
 </body>
 </html>
+
+
+
+

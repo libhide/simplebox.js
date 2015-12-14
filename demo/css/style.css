@@ -2,6 +2,15 @@ body {
   font-size: 1.125em;
   line-height: 1.6;
   font-family: Avenir, sans-serif;
+  font-weight: 400;
+  transition: background-color 300ms ease-in-out;
+}
+
+.invert {
+  color: #fff;
+  background-color: #000;
+  border-color: white;
+  font-weight: 300;
 }
 
 img {
@@ -14,12 +23,21 @@ a {
   text-decoration: none;
   color: black;
   border-bottom: 1px solid rgba(0, 0, 0, 0);
-  transition: border-color 200ms ease-in;
+  transition: all 200ms ease-in;
   padding-bottom: -2px;
 }
 
 a:hover {
   border-color: rgba(0, 0, 0, 0.6);
+}
+
+.link--invert {
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+}
+
+.link--invert:hover {
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
 .container {
@@ -39,6 +57,11 @@ a:hover {
   display: inline-block;
   font-weight: 500;
   border-bottom: 4px solid black;
+}
+
+.title--invert {
+  border-color: white;
+  transition: border-color 300ms ease-in-out;
 }
 
 .subtitle {
@@ -68,6 +91,14 @@ a:hover {
   width: 25px;
 }
 
+.switch {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 0 0 20px 20px;
+  font-size: 0.8em;
+}
+
 /* Media Queries */
 @media (max-width: 660px) {
   .credits {
@@ -75,6 +106,7 @@ a:hover {
     text-align: center;
     margin: 140px 0 0 0;
   }
+  .switch {
+    display: none;
+  }
 }
-
-
