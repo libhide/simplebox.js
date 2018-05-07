@@ -23,7 +23,6 @@ It is rather straightforward to use simplebox&mdash;just add the **slb** class t
 
 ```javascript
 $(function () {
-    // This assumes that you have placed the cross.svg file inside /img in your project
     $(".slb").simplebox();
 });
 ```
