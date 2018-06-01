@@ -4,7 +4,8 @@
     $.fn.simplebox = function(options) {
         var settings = $.extend({
             fadeSpeed: 400,
-            darkMode: false
+            darkMode: false,
+            postfix: ""
         }, options);
 
         // Helper Variables
@@ -57,7 +58,10 @@
 
                 var $this = $(this);
                 var imageSRC = $this.attr("src");
+                if (~$this.attr("class").indexOf("hq")) imageSRC = imageSRC.substring(0, imageSRC.lastIndexOf(".")) + settings.postfix + imageSRC.substring(imageSRC.lastIndexOf("."));
+                var imageSRCSET = $this.attr("srcset");
                 $image.attr("src", imageSRC);
+                $image.attr("srcset", imageSRCSET);
                 $image.css("max-height", "80%");
                 $image.addClass('pop-in');
                 $image.removeClass('pop-out');
