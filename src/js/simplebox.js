@@ -5,7 +5,8 @@
         var settings = $.extend({
             fadeSpeed: 400,
             darkMode: false,
-            postfix: ""
+            postfix: "",
+            hqClass: "hq"
         }, options);
 
         // Helper Variables
@@ -58,7 +59,10 @@
 
                 var $this = $(this);
                 var imageSRC = $this.attr("src");
-                if (~$this.attr("class").indexOf("hq")) imageSRC = imageSRC.substring(0, imageSRC.lastIndexOf(".")) + settings.postfix + imageSRC.substring(imageSRC.lastIndexOf("."));
+                if (~$this.attr("class").indexOf(settings.hqClass)) {
+                    let dotIndex = imageSRC.lastIndexOf(".");
+                    imageSRC = imageSRC.substring(0, dotIndex) + settings.postfix + imageSRC.substring(dotIndex);
+                }
                 var imageSRCSET = $this.attr("srcset");
                 $image.attr("src", imageSRC);
                 $image.attr("srcset", imageSRCSET);
