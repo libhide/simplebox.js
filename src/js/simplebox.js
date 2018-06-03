@@ -60,7 +60,7 @@
                 var $this = $(this);
                 var imageSRC = $this.attr("src");
                 if (~$this.attr("class").indexOf(settings.hqClass)) {
-                    let dotIndex = imageSRC.lastIndexOf(".");
+                    var dotIndex = imageSRC.lastIndexOf(".");
                     imageSRC = imageSRC.substring(0, dotIndex) + settings.postfix + imageSRC.substring(dotIndex);
                 }
                 var imageSRCSET = $this.attr("srcset");
