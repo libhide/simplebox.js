@@ -29,14 +29,17 @@ $(function () {
 
 ### Advanced
 
-The plugin comes with two options. Yes, just two. Think of this as a feature and not a drawback! If you want to access these options, call the plugin like this:
+The plugin comes with four options. Yes, just four. Think of this as a feature and not a drawback! If you want to access these options, call the plugin like this:
 
 ```JavaScript
 $('.slb').simplebox({
     fadeSpeed: 300, // default is 400ms, applied to all fade animations in the plugin
-    darkMode: true // default is false
+    darkMode: true, // default is false
+    postfix: "_full", // default is ""
+    hqClass: "highres" // default is "hq"
 });
 ```
+You can use `postfix` and `hqClass` options to customize the path to the image used in the pop-up. For every image defined as `<img src="[initial path].[extension]" class="slb [hqClass]" alt="[alt]">` simplebox will use `<img src="[initial path][postfix].[extension]" class="slb" alt="[alt]">`. Notice that you shouldn't use `hqClass` with images that don't have a version with the postfix.
 
 ## In the Wild
 
