@@ -64,8 +64,10 @@
                     imageSRC = imageSRC.substring(0, dotIndex) + settings.postfix + imageSRC.substring(dotIndex);
                 }
                 var imageSRCSET = $this.attr("srcset");
+                var imageALT = $this.attr("alt");
                 $image.attr("src", imageSRC);
                 $image.attr("srcset", imageSRCSET);
+                $image.attr("alt", imageALT);
                 $image.css("max-height", "80%");
                 $image.addClass('pop-in');
                 $image.removeClass('pop-out');
