@@ -41,6 +41,8 @@ $('.slb').simplebox({
 ```
 You can use `postfix` and `hqClass` options to customize the path to the image used in the pop-up. For every image defined as `<img src="[initial path].[extension]" class="slb [hqClass]" alt="[alt]">` simplebox will use `<img src="[initial path][postfix].[extension]" class="slb" alt="[alt]">`. Notice that you shouldn't use `hqClass` with images that don't have a version with the postfix.
 
+Simplebox will keep the values of `srcset` and `alt` attributes in the pop-up image.
+
 ## In the Wild
 
 - http://ratiksharma.com/blog/
