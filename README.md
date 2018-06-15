@@ -1,6 +1,6 @@
 # simplebox.js
 
-simplebox.js is a lightweight lightbox plugin (936 bytes) that is easy to modify or extend to fit your needs. This plugin is intended to be a quick, responsive, efficient.
+simplebox.js is a lightweight lightbox plugin (~936 bytes) that is easy to modify or extend to fit your needs. This plugin is intended to be a quick, responsive, efficient.
 
 The idea behind this plugin was to make the process of setting up a lightbox painless. My experience with finding and setting up lightbox plugins has been pretty bad. The plugins I've come across almost always have too many features. simplebox.js is designed to have just one feature: lightboxing. It's responsive out of the box and allows only a few crucial settings.
 
@@ -41,10 +41,8 @@ $('.slb').simplebox({
 ```
 You can use `postfix` and `hqClass` options to customize the path to the image used in the pop-up. For every image defined as `<img src="[initial path].[extension]" class="slb [hqClass]" alt="[alt]">` simplebox will use `<img src="[initial path][postfix].[extension]" class="slb" alt="[alt]">`. Notice that you shouldn't use `hqClass` with images that don't have a version with the postfix.
 
-Simplebox will keep the values of `srcset` and `alt` attributes in the pop-up image.
+Also, simplebox keeps the values of `srcset` and `alt` attributes in the pop-up image as well so you can do some cool things with `srcset` if you need to as well!
 
-## In the Wild
-
-- http://ratiksharma.com/blog/
+---
 
 If you are using this plugin and want your product to be listed here, hit me up on @Ratik96 on Twitter!
